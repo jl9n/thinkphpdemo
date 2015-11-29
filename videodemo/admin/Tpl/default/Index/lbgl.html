@@ -1,0 +1,31 @@
+<link rel=stylesheet href="__PUBLIC__/admin/dhtmlet.css" type="text/css">
+<link href="__PUBLIC__/admin/css/back.css" type="text/css" rel=stylesheet>
+<div>
+	<div class="bg">
+		<div class="mlu">
+		<li>大类ID</li>
+		<li>大类标题</li>
+		<li>操作</li>
+		</div>
+	</div>
+	<volist name="list" id="vo">
+	<form action="__URL__/u_upload" method="post">
+	<div class="bg">
+		<li><input type="hidden" value="{$vo.id}" name="id">{$vo.id}</li>
+		<li><input type="text" value="{$vo.title}" name="title">	</li>
+		<li><div class="gl"><input type="submit" value="更新">    &nbsp;&nbsp;&nbsp;&nbsp;删除</div></li>
+	</div>
+	</form>
+	</volist>
+</div>
+<div style="border:solid 1px #e8e8e8;width:900px;height:80px;">
+	<div class="bg2">
+		添加大分类
+	</div>
+	<div class="fl"><center>
+		<form method="post" action="__URL__/i_upload">
+		新增大分类：<input type="text" size="70px" name="title"><input type="submit" value="添加">
+		</form>
+		</center>
+	</div>
+</div>

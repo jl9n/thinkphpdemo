@@ -1,0 +1,26 @@
+<?php if (!defined('THINK_PATH')) exit();?><html>
+	<head>
+		<link rel="stylesheet" href="__PUBLIC__/admin/css/bootstrap.min.css">
+		<link rel="stylesheet" href="__PUBLIC__/admin/css/bootstrap.css">
+		<link rel="stylesheet" href="__PUBLIC__/admin/css/bootstrap.theme.css">
+		<link rel="stylesheet" href="__PUBLIC__/admin/css/bootstrap-theme.min.css">
+	</head>
+	<body>
+		<form method="post" action="__URL__/checkLog">
+		yonghu:<input type="text" name="username" value="请输入用户名..">
+		passwd:<input type="password" name="passwd" value="">
+		
+		请输入验证码
+		<input id="txtverify" value="" size="20" type="text" name="txtverify" />
+<img id="verifyImg" src="__URL__/verify" onClick="changeVerify()" title="点击刷新验证码"/>
+		<input type="submit" value="登陆">
+		</form>
+		
+		<script language="JavaScript">
+function changeVerify(){
+var timenow = new Date().getTime(); document.getElementById('verifyImg').src='__URL__/verify/'+timenow;
+}
+</script>
+	</body>
+
+</html>

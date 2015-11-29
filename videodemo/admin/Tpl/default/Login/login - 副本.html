@@ -1,0 +1,14 @@
+<html>
+	<head></head>
+	<body>
+		<form method="post" action="__URL__/checkLog">
+		yonghu:<input type="text" name="username">
+		passwd:<input type="password" name="passwd">
+		
+		请输入验证码:<input name="textfield3" type="text" size="30" placeholder='请输入验证码' id='img1Code' style='width:100px;'/>
+		<img src="__APP__/CodeVerify/codeVerify/w/100/h/30/type/4/length/4" width="60" height="20" id='code' onclick='this.src=this.src+"?"+Math.random()'/>
+		<input type="submit" value="登陆">
+		</form>
+	</body>
+
+</html>

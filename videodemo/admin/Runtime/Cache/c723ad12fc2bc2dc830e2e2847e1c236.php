@@ -1,0 +1,1 @@
+<?php if (!defined('THINK_PATH')) exit();?><html><head></head><meta http-equiv="content-type" content="text/html;charset=utf-8"><body>	<a href="./mess" target="mainFrame">招生列表</a><br />	<a href="./mess" target="mainFrame">招生列表</a><br />	<a href="./mess" target="mainFrame">招生添加</a></body></html>

@@ -1,0 +1,25 @@
+li{float:left;width:170px;}
+.vertical{width:60px;line-height:20px;}
+h3{color:red;letter-spacing:6px;padding:10px 0;}
+a:link{text-decoration:none;font-size:14pt;color:blue;}
+a:hover{color:#FFCC66;}
+a:active{font-size:14pt;color:#FFFF00;}
+table{margin-top:15px;font-family: "Microsoft YaHei","lucida grande", verdana, lucida, STSong, sans-serif;}
+th{width:200px; font-size:16pt;color:#C0C0C0;margin-left:10px;text-align:left;}
+td{padding-left:40px;font-size:12px;color:#0099CC;line-height:20px;padding:6 30px;}
+.horizontal{border-top:solid red 1px;}
+select,input{width:200px;}
+.lw{width:178px;height:80px;float:left;border:solid 1px #e8e8e8;}
+.clear{clear:both;}
+.bt{width:900px;height:80px;float:left;border:solid 1px #e8e8e8; text-align:center;font-weight:700;line-height:80px;}
+.bg{width:900px;height:60px;bgcolor:#e8e8e8;border:solid 1px #e8e8e8;}
+.mlu{background:#e8e8e8;width:900px;height:30px;}
+.bg li{width:33%;border:solid 1px #e8e8e8;height:30px;}
+.gl{float:left;}
+.gl input{width:50px;}
+.bg2{width:900px;background:#e8e8e8;height:30px;}
+.fl{width:900px;line-height:40px;}
+.bk{background:#47b5ed;}
+.bmk td,th{border:solid 1px #e8e8e8;color:#0099CC}
+.bmk td{color:#333;}
+.asv td{color:#333;}
