@@ -1,0 +1,1 @@
+<?php if (!defined('THINK_PATH')) exit();?><html>	<body style="">		<center><h3 style="margin-top:20px">蜗牛制作</h3></center>	</body></html>
