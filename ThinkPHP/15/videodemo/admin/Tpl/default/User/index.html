@@ -1,0 +1,22 @@
+<html>
+<head>
+<title>{$title}</title>
+</head>
+<body>
+<!-- 前面是form表单-->
+<form action="__URL__/add" method="post">
+	用户名:<input type="text" name="username"><br>
+	密码:<input type="password" name="password"><br>
+	重复密码:<input type="repassword" name="repassword"><br>	
+	<input type="submit" value="注册">
+
+</form>
+
+<!-- 后面是显示的用户列-->
+<volist name="alist" id="vo">
+	<li><span>ID<span>{$vo['id']} <span>用户名<span>{$vo['username']} <span>注册IP<span>{$vo['createip']} <a href="__URL__/del/id/{$vo['id']}">删除</a>  <a href="__URL__/edit/id/{$vo['id']}">编辑</a> </li>
+</volist>
+
+</body>
+
+</html>

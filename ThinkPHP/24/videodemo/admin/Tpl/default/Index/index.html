@@ -1,0 +1,36 @@
+<include file='$header' />
+<tagLib name="cx,html" />
+
+<script>
+	function show(){
+		
+		alert('aaaa');
+	}
+</script>
+
+
+//例如url路由
+//A方法
+//.shtml
+//培养自己写项目的能力
+// 如果大家感兴趣，可以上兄弟连论坛来发贴求助
+
+//或者在以后我还会出相关的项目，如何去写一个自己的thinkphp的东西。
+
+//兄弟连http://bbs.lampbrother.net
+
+//http://t.sina.com.cn/kaiwenli
+
+
+<html:select name="id"  dblclick="show()" options="list"/>
+
+
+
+
+
+<{$title|default='这家伙很懒,什么都没有留下'}>
+
+<h1><{$title:id}></h1>时间<span><{$atime|date='Y-m-h H:i:s',###}></span>
+
+
+<include file='Public:footer' />

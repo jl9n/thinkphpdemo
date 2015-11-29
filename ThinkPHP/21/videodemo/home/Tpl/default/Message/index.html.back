@@ -1,0 +1,58 @@
+<html>
+<head>
+<script src="__PUBLIC__/js/jquery-1.4.2.js"></script>
+<script>
+			$(function(){
+					$('input:button').click(function(){
+							var $title=$('input[name="title"]').val();
+							var $message=$('input[name="message"]').val();
+							
+							$mess=$('#mess');
+							
+							$.getJSON('__URL__/add',{title:$title,message:$message},function(json){
+								
+									if(json.status==1){
+										$mess.slideDown(3000,function(){
+											$mess.css('display','block');
+											
+											
+										}).html('标题为'+json.data.title+'信息为'+json.data.message);
+									}else{
+											$mess.slideDown(3000,function(){
+												
+												
+												$mess.css('display','block');
+												
+											}).html('信息添加失败，请检查');
+										
+									}
+								
+							})
+							
+						
+						
+					})
+					
+			
+			}
+			)
+			
+		
+</script>
+</head>
+
+<body>
+<div style="display:none;color:red" id="mess"></div>
+<form action="__URL__/add" method="GET">
+
+	标题<input type="text" name="title"><br>
+	
+	信息<input type="text" name="message"><br>
+	
+	<input type="button" value="提交">
+
+</form>
+
+
+</body>
+</html>

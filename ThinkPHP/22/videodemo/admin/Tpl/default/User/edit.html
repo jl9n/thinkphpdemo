@@ -1,0 +1,26 @@
+<html>
+<head>
+<title>{$title}</title>
+</head>
+
+
+<body>
+	<form action="__URL__/update" method="post">
+		用户名：<input type="text" name="username" value="{$list['username']}"><br>
+		
+		密码:<input type="password" name="password" value="{$list['password']}"><br>
+		
+		注册IP：<input type="text" name="createip" value="{$list['createip']}"><br>
+		
+		注册时间：<input type="text" name="createtime" value="{$list['createtime']}"><br>
+		
+		<input type="hidden" value="{$list['id']}" name="id">
+		<input type="submit" value="更新">
+	
+	
+	
+	</form>
+
+</body>
+
+</html>

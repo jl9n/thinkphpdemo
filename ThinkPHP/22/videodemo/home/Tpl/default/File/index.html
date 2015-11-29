@@ -1,0 +1,21 @@
+<html>
+
+<body>
+	<volist name="filelist" id="vo">
+			小图<img src="__PUBLIC__/upload/s_{$vo['filename']}"><br>
+			大图<img src="__PUBLIC__/upload/m_{$vo['filename']}"><br>
+	</volist>
+
+
+	<form action="__URL__/upload" method="POST" enctype="multipart/form-data">
+
+		<input type="file" name="file[]"><br>
+		<input type="file" name="file[]"><br>
+		<input type="file" name="file[]"><br>
+		<input type="submit" value="上传">	
+	
+	</form>
+
+</body>
+
+</html>
