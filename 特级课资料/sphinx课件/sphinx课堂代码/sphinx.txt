@@ -1,0 +1,52 @@
+sphinx的工作原理：
+
+	1.将mysql里面的数据提取出来
+	2.将提取出的数据进行分词，然后创建索引
+	3.在php进行搜索的时候，把词拆开给sphinx
+	4.sphinx把要搜索的词传递自己的索引表
+	5.找到文档的ID
+	6.把文档的ID传递给mysql
+	7.把mysql中ID的对应的数据传回给sphinx
+	8.sphinx再传回给php
+
+安装sphinx
+	1.tar解压
+	2../configure --prefix    --with-mysql
+	3.make && make install
+	4.cp配置文件
+	5.修改主数据源，主数据索引
+
+用到sphinx的天龙八部结合mysql的天龙八部
+
+mysql> desc counter;
++--------+---------+------+-----+---------+----------------+
+| Field  | Type    | Null | Key | Default | Extra          |
++--------+---------+------+-----+---------+----------------+
+| id     | int(11) | NO   | PRI | NULL    | auto_increment |
+| max_id | int(11) | YES  |     | NULL    |                |
++--------+---------+------+-----+---------+----------------+
+
+修改主数据源
+
+更新计数器的最大ID
+sql_query_pre = replace into counter select 1,max(id) from bbs
+
+修改提取数据源的sql语句
+sql_query = select id,title,content from bbs where id <=(select max_id from counter where counter.id=1)
+
+配置增量元：
+	sql_query_pre = set names utf8
+	sql_query = select id,title,content from bbs where id > (select max_id from counter where counter.id=1)
+
+
+主数据索引
+	source = main
+
+增量数据索引
+	source = delta
+	
+	
+	
+	
+	insert into post(title,content) values("春节","春节联欢晚会！");
+	insert into post(title,content) values("元宵","元宵晚会！");
